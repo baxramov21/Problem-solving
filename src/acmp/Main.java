@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        boolean value = HappyTicket.solution(scanner.nextInt());
+        boolean value = HappyTicket.solution(scanner.next());
         if (value) {
             System.out.println("YES");
         } else {
@@ -22,10 +22,13 @@ public class Main {
      */
 
 class HappyTicket {
-    static boolean solution(int number) {
+    static boolean solution(String number) {
         String numToStr = String.valueOf(number);
-        char[] numbersToChars = numToStr.toCharArray();
+        char[] numbersToChars = number.toCharArray();
         boolean result = false;
+        if (numToStr.equals("000000")) {
+            result = true;
+        }
         if (numbersToChars.length == 6) {
             int firstTrio = 0;
             int secondTrio = 0;

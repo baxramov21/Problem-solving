@@ -1,3 +1,5 @@
+package day1;
+
 public class T4 {
     static int solution(int amount, int price1, int price2) {
         if (price1 >= 1 && price1 <= 100

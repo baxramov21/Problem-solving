@@ -1,3 +1,5 @@
+package day1;
+
 public class T2 {
 
     static int solution(int first, int second) {

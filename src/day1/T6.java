@@ -1,3 +1,5 @@
+package day1;
+
 public class T6 {
     static int solution(int number) {
         int result = 1;

@@ -1,3 +1,5 @@
+package day1;
+
 public class T5 {
     static int solution(String time) {
         char[] chars = time.toCharArray();

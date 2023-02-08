@@ -1,3 +1,5 @@
+package day1;
+
 class T3 {
     static int solution(int input) {
         if (input > 6) {

@@ -5,9 +5,11 @@ import java.util.Scanner;
 public class NumericRootMain {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int firstNumber = NumericRoot.numericRoot(scanner.nextLong());
-        int secondNumber = NumericRoot.numericRoot(scanner.nextLong());
-        System.out.println(firstNumber + " " + secondNumber);
+        int[] numbers = new int[scanner.nextInt()];
+        for (int i = 0; i < numbers.length; i++) {
+            numbers[i] = scanner.nextInt();
+        }
+        System.out.println(NumericRoot.numericRoot(NumericRoot2.invoke(numbers)));
     }
 }
 
@@ -29,5 +31,35 @@ class NumericRoot {
             value = value + Character.getNumericValue(numbers[i]);
         }
         return numericRoot(value);
+    }
+}
+
+
+
+/*
+
+Given an array of one-dimensional integers. The number of array elements is n. Write a program that finds
+the numerical root of the following expression.
+
+input: 5
+input: 5,6,1
+output: 2
+
+
+5 + (5 * 6) + (5 * 6 * 1)
+ */
+
+class NumericRoot2 {
+    static long invoke(int[] args) {
+        long value1 = 0;
+
+        for (int i = 0; i < args.length; i++) {
+            long proizved = 1;
+            for (int j = 0; j <= i; j++) {
+                proizved *= args[j];
+            }
+            value1 += proizved;
+        }
+        return value1;
     }
 }

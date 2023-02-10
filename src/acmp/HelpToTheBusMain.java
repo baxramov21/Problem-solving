@@ -6,15 +6,21 @@ public class HelpToTheBusMain {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int busHeight = 437;
-        System.out.println("Enter bridge amount: ");
         int bridgeAmount = scanner.nextInt();
         int[] bridgeHeights = new int[bridgeAmount];
         for (int i = 0; i < bridgeAmount; i++) {
-            System.out.println("Enter bridge height");
             bridgeHeights[i] = scanner.nextInt();
         }
-        String value = HelpToTheBus.solution(busHeight, bridgeHeights);
-        System.out.println(value);
+
+        int value = HelpToTheBus.solution(busHeight, bridgeHeights);
+        String finalResult = "";
+        if (value > 0) {
+            finalResult = String.format("Crash %d ", value);
+        } else {
+            finalResult = "No crash";
+        }
+
+        System.out.println(finalResult);
     }
 }
 
@@ -41,16 +47,13 @@ public class HelpToTheBusMain {
  */
 
 class HelpToTheBus {
-    static String solution(int busHeight, int[] bridge) {
-        String value = "ted";
+    static int solution(int busHeight, int[] bridge) {
         for (int i = 0; i < bridge.length; i++) {
             int position = i + 1;
-            if (busHeight > bridge[i]) {
-                value = "Crash " + String.valueOf(position);
-            } else {
-                value = "No crash";
+            if (busHeight >= bridge[i]) {
+                return position;
             }
         }
-        return value;
+        return 0;
     }
 }

@@ -46,7 +46,7 @@ input: 5,6,1
 output: 2
 
 
-5 + (5 * 6) + (5 * 6 * 1)
+Solution: 5 + (5 * 6) + (5 * 6 * 1)
  */
 
 class NumericRoot2 {

@@ -9,6 +9,10 @@ public class Triangle {
     }
 }
 
+/*
+Вам дан треугольник с разными сторонами a, b и c. Создайте калькулятор, чтобы найти сторону треугольника.
+ */
+
 class TriangleFace {
     static float findTriangleFace(double a, double b, double c) {
         double p = (a + b + c) / 2;

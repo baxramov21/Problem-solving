@@ -1,9 +1,10 @@
 package robo_contest;
 
+import java.math.BigDecimal;
 import java.util.Scanner;
 
 public class Massive {
-    public static void main(String[] args) {
+    public static void main(String[] strings) {
         Scanner scanner = new Scanner(System.in);
         int length = scanner.nextInt();
         long[] inputs = new long[length];
@@ -11,7 +12,19 @@ public class Massive {
             inputs[i] = scanner.nextInt();
         }
 
-        System.out.println(MassiveSolution.solution(inputs));
+        double pairs = 0;
+        double odds = 1;
+
+        for (int i = 1; i <= inputs.length; i++) {
+            if (i % 2 == 0) {
+                pairs += inputs[i - 1];
+            } else {
+                odds *= inputs[i - 1] ;
+            }
+        }
+
+        double value = odds * 1.0 / pairs;
+        System.out.printf("%.2f",value);
     }
 }
 

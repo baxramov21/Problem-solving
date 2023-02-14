@@ -6,11 +6,17 @@ public class Square {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String value = "";
-        boolean isSquare = SquareFix.square(scanner.nextInt());
+        boolean isSquare = false;
+        int number = scanner.nextInt();
+        for (int i = 0; i < number; i++) {
+            if (i * i == number) {
+                isSquare = true;
+            }
+        }
         if (isSquare) {
-            value = "YES";
+            value = "Yes";
         } else {
-            value = "NO";
+            value = "No";
         }
         System.out.println(value);
     }

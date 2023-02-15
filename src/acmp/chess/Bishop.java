@@ -2,11 +2,11 @@ package acmp.chess;
 
 import java.util.Scanner;
 
-public class Elephant {
+public class Bishop {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String result = "NO";
-        boolean canGo = ElephantTask.elephantFix(scanner.nextInt(),scanner.nextInt(), scanner.nextInt(), scanner.nextInt());
+        boolean canGo = BishopTask.elephantFix(scanner.nextInt(), scanner.nextInt(), scanner.nextInt(), scanner.nextInt());
         if (canGo) {
             result = "YES";
         }
@@ -22,7 +22,7 @@ public class Elephant {
 (X2,Y2) на стандартной шахматной доске?
  */
 
-class ElephantTask {
+class BishopTask {
     static boolean elephantFix(int x1, int y1, int x2, int y2) {
         int x = x1 - x2;
         int y = y1 - y2;

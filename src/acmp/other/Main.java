@@ -1,4 +1,4 @@
-package acmp;
+package acmp.other;
 
 import java.util.Scanner;
 

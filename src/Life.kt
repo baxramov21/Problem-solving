@@ -1,5 +1,3 @@
-package acmp
-
 class Life {
     fun ourLife(hardships: String) {
         val our_words_to_opponents = "Fuck off"

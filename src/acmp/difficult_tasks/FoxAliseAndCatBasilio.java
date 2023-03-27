@@ -31,7 +31,6 @@ public class FoxAliseAndCatBasilio {
 class TaskSolution {
     static int firstN = 5;
     static int secondN = 3;
-    static int noCoins = 0;
 
     static HashMap<Integer, Integer> invoke(int sum) {
         int fiveCoinsAmount = sum / 5 * 5;

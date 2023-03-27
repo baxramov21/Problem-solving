@@ -34,10 +34,10 @@ class TaskSolution {
     static int noCoins = 0;
 
     static HashMap<Integer, Integer> invoke(int sum) {
-        int fiveCoinsAmount = sum/5*5;
+        int fiveCoinsAmount = sum / 5 * 5;
         int threeCoinsAmount = sum - fiveCoinsAmount;
 
-        while(fiveCoinsAmount%5!=0 || threeCoinsAmount%3!=0){
+        while(fiveCoinsAmount % 5 !=0 || threeCoinsAmount % 3 !=0){
             fiveCoinsAmount-=5;
             threeCoinsAmount+=5;
         }
